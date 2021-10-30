@@ -1,0 +1,66 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://Assets/font/Chalkduster_48.tres" type="DynamicFont" id=1]
+[ext_resource path="res://game/back_to_title.gd" type="Script" id=2]
+[ext_resource path="res://game/start_new_game.gd" type="Script" id=3]
+
+[node name="StartGame" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="CenterContainer" type="CenterContainer" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -1.26697
+margin_top = 0.844604
+margin_right = -1.26697
+margin_bottom = 0.844604
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CenterContainer"]
+margin_left = 413.0
+margin_top = 188.0
+margin_right = 867.0
+margin_bottom = 531.0
+
+[node name="Label" type="Label" parent="CenterContainer/VBoxContainer"]
+margin_right = 454.0
+margin_bottom = 127.0
+custom_fonts/font = ExtResource( 1 )
+custom_colors/font_color_shadow = Color( 0.560784, 0.537255, 0.870588, 1 )
+custom_constants/shadow_offset_x = 0
+custom_constants/shadow_offset_y = 5
+text = "Start menu
+"
+align = 1
+
+[node name="Button3" type="Button" parent="CenterContainer/VBoxContainer"]
+margin_top = 131.0
+margin_right = 454.0
+margin_bottom = 199.0
+custom_fonts/font = ExtResource( 1 )
+text = "Start New Game"
+script = ExtResource( 3 )
+
+[node name="Button2" type="Button" parent="CenterContainer/VBoxContainer"]
+margin_top = 203.0
+margin_right = 454.0
+margin_bottom = 271.0
+custom_fonts/font = ExtResource( 1 )
+text = "Select Level"
+
+[node name="Button" type="Button" parent="CenterContainer/VBoxContainer"]
+margin_top = 275.0
+margin_right = 454.0
+margin_bottom = 343.0
+custom_fonts/font = ExtResource( 1 )
+text = "Back"
+
+[connection signal="pressed" from="CenterContainer/VBoxContainer/Button3" to="CenterContainer/VBoxContainer/Button3" method="_on_Button3_pressed"]
+[connection signal="pressed" from="CenterContainer/VBoxContainer/Button" to="." method="_on_Button_pressed"]
