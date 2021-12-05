@@ -1,0 +1,61 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://Assets/font/Chalkduster_48.tres" type="DynamicFont" id=1]
+[ext_resource path="res://Assets/skin2.png" type="Texture" id=2]
+[ext_resource path="res://levels/intro_lvl2.gd" type="Script" id=3]
+
+[sub_resource type="Animation" id=1]
+length = 2.0
+tracks/0/type = "value"
+tracks/0/path = NodePath("ColorRect:color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 2 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 0, 0, 0, 0 ), Color( 0, 0, 0, 1 ) ]
+}
+
+[node name="intro_lvl2" type="Node2D"]
+script = ExtResource( 3 )
+
+[node name="TextureRect" type="TextureRect" parent="."]
+margin_right = 1282.0
+margin_bottom = 720.0
+texture = ExtResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="TextureRect"]
+anchor_top = 0.500563
+anchor_right = 1.0
+anchor_bottom = 0.500563
+margin_left = -0.377197
+margin_top = -96.0
+margin_right = -0.377197
+margin_bottom = 96.0
+custom_fonts/font = ExtResource( 1 )
+text = "Level 2"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TransitionScreen" type="CanvasLayer" parent="."]
+
+[node name="ColorRect" type="ColorRect" parent="TransitionScreen"]
+visible = false
+anchor_right = 1.0
+anchor_bottom = 1.0
+color = Color( 0, 0, 0, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="TransitionScreen"]
+anims/transition = SubResource( 1 )

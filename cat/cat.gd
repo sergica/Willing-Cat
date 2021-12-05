@@ -7,16 +7,14 @@ export var gravity = 50 # gravity of the cat
 export var jumpforce = 1000 # jump force of the cat
 var motion = Vector2.ZERO 
 onready var animation = $AnimatedSprite #allow animations form AnimatedSprite to be used
+var respawnpoint #level starting point 
 
-#func _ready():
-	#when signal killcat is listened by the cat then call killcat() to die
-# warning-ignore:return_value_discarded
-#	Signals.connect("killcat",self,"killcat")
-# this function has now been passed to the level script
-
-func _physics_process(delta): 
-	#Cat movement
+func _ready():
+	respawnpoint = global_position
 	
+func _physics_process(delta): 
+	
+	#Cat movement
 	if is_on_floor(): # If the ground checker is colliding with the ground, meaning cat is on the floor
 		motion.x = speed # then the x coordinates of the vector be positive
 		animation.play("run") # run animation plays
@@ -30,4 +28,7 @@ func _physics_process(delta):
 	# Move and slide is a function which allows the kinematic body to detect collisions and move accordingly
 	motion = move_and_slide(motion, Vector2.UP)
 
-
+	#Point of cat respawn when dead
+func respawn():
+	global_position = respawnpoint
+	
