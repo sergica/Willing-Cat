@@ -11,8 +11,11 @@ config_version=4
 [application]
 
 config/name="Willing Cat"
+config/description="TFG project videogame"
 run/main_scene="res://title_screen/TitleScreen.tscn"
 config/icon="res://icon.png"
+config/macos_native_icon="res://Assets/Logo.icns"
+config/windows_native_icon="res://Assets/Logo.ico"
 
 [autoload]
 
@@ -22,6 +25,7 @@ Signals="*res://game/signals.gd"
 
 window/size/width=1280
 window/size/height=720
+window/size/resizable=false
 
 [input]
 

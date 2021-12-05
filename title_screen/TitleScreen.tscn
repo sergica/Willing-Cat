@@ -88,13 +88,14 @@ margin_top = 10.0
 margin_right = 409.0
 margin_bottom = 210.0
 texture = ExtResource( 5 )
+flip_h = true
 
 [node name="Footer" type="Label" parent="Menu"]
 margin_top = 603.0
 margin_right = 1040.0
 margin_bottom = 617.0
 size_flags_vertical = 7
-text = "Alpha version. Game in development by s3rg1ca."
+text = "Demo version. Game in development."
 align = 1
 
 [node name="FadeIn" parent="." instance=ExtResource( 6 )]
