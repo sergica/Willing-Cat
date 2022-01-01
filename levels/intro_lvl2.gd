@@ -5,7 +5,7 @@ var start_level
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	#timer to start level 2
-	start_level = get_tree().create_timer(2.0) 
+	start_level = get_tree().create_timer(2.5) 
 	transition()
 	yield(start_level,"timeout")
 	if start_level.time_left <= 0.0:

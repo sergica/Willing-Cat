@@ -36,6 +36,7 @@ func killcat():
 		#restart music
 		$Level_music.play(0.0)
 		#move cat to start position
+		$cat/AnimatedSprite.play("run")
 		$cat.respawn()
 		
 		
@@ -62,6 +63,7 @@ func _on_finish_body_entered(body: Node) -> void:
 	#write number of stars in end level label
 	$cat/end_lvl/Panel/Label.set_text(String(stars))
 	#show end lvl panel
+	$cat/end_lvl/Panel/next_lvl.visible = false
 	$cat/end_lvl/Panel.visible = true
 	
 	
@@ -69,11 +71,6 @@ func _on_finish_body_entered(body: Node) -> void:
 func transition():
 	$TransitionScreen/ColorRect.visible = true
 	$TransitionScreen/AnimationPlayer.play("transition")
-
-
-#func _on_next_lvl_pressed() -> void:
-	#get_tree().change_scene("res://levels/Level6.tscn")
-
 
 func _on_to_menu_pressed() -> void:
 	get_tree().change_scene("res://title_screen/TitleScreen.tscn")

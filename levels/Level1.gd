@@ -30,12 +30,7 @@ func killcat():
 	get_tree().paused = true
 	#timer
 	yield(cat_is_dead,"timeout")
-	
-	#show respawn timer in you died message
-	#cat_is_dead.time_left > 0:
-	#time = time-1 
-	#$CanvasLayer/dead/Panel/countdown.set_text(String(time))
-		
+
 	#timer is up so now it restarts the level
 	if cat_is_dead.time_left <= 0.0:
 		#unpause game
@@ -47,6 +42,7 @@ func killcat():
 		#restart music
 		$Level_music.play(0.0)
 		#move cat to start position
+		$cat/AnimatedSprite.play("run")
 		$cat.respawn()
 		
 		
@@ -84,7 +80,7 @@ func transition():
 
 #Go to next level button
 func _on_next_lvl_pressed() -> void:
-	get_tree().change_scene("res://levels/Level2.tscn")
+	get_tree().change_scene("res://levels/intro_lvl2.tscn")
 
 	
 #Return to menu button	

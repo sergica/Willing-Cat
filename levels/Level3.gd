@@ -36,6 +36,7 @@ func killcat():
 		#restart music
 		$Level_music.play(0.0)
 		#move cat to start position
+		$cat/AnimatedSprite.play("run")
 		$cat.respawn()
 		
 		
@@ -72,7 +73,7 @@ func transition():
 	
 
 func _on_next_lvl_pressed() -> void:
-	get_tree().change_scene("res://levels/Level4.tscn")
+	get_tree().change_scene("res://levels/intro_lvl4.tscn")
 
 
 func _on_to_menu_pressed() -> void:
