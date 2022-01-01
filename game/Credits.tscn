@@ -44,19 +44,30 @@ __meta__ = {
 }
 
 [node name="Label" type="Label" parent="CenterContainer"]
-margin_left = 457.0
-margin_top = 285.0
-margin_right = 823.0
-margin_bottom = 435.0
-text = "A Willing Cat is a game made for TFG Videogames at UOC
+margin_left = 288.0
+margin_top = 155.0
+margin_right = 991.0
+margin_bottom = 565.0
+custom_constants/line_spacing = 8
+text = "Willing Cat is a game made for TFG Videogames, part of Multimedia Degree at Universitat Oberta de Catalunya
+License Creative Commons Attribution-NonCommercial-NoDerivs 3.0 Spain (CC BY-NC-ND 3.0 ES) 
 
 
 Art, animation & programming
-Sergi castejon Arias
+Sergi Castejon Arias
 
 
 Music
-Alexandr Zhelanov"
+Alexandr Zhelanov
+License Attribution 4.0 International (CC BY 4.0) 
+
+Music Tracks
+Inevitability, Neon Transit, Sherlock Holmes Case, Long Night Drive, Magic of North
+Alexandr Zhelanov Youtube Channel: Alexandr Zhelanov's Music
+
+
+
+Thank you for playing"
 align = 1
 
 [node name="credits_exit" type="Button" parent="."]
