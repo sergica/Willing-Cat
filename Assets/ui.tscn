@@ -7,9 +7,9 @@
 anchor_right = 1.0
 anchor_bottom = 1.0
 margin_left = 0.153015
-margin_top = -0.321854
+margin_top = -0.0641025
 margin_right = 0.153076
-margin_bottom = -0.321838
+margin_bottom = -0.0640869
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -17,21 +17,21 @@ __meta__ = {
 [node name="NinePatchRect" type="NinePatchRect" parent="."]
 margin_left = 1.0
 margin_top = -1.0
-margin_right = 121.0
+margin_right = 168.0
 margin_bottom = 69.0
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="Label" type="Label" parent="NinePatchRect"]
-anchor_left = 1.0
+anchor_left = 0.5
 anchor_top = 0.5
-anchor_right = 1.0
+anchor_right = 0.5
 anchor_bottom = 0.5
-margin_left = -76.7177
-margin_top = -35.2823
-margin_right = 2.28229
-margin_bottom = 34.7177
+margin_left = -39.5
+margin_top = -35.2578
+margin_right = 39.5
+margin_bottom = 34.7422
 custom_fonts/font = ExtResource( 2 )
 custom_colors/font_color = Color( 0.956863, 1, 0, 1 )
 text = "0"
@@ -44,11 +44,26 @@ __meta__ = {
 [node name="TextureRect" type="TextureRect" parent="NinePatchRect"]
 anchor_top = 0.5
 anchor_bottom = 0.5
-margin_left = 20.4691
-margin_top = -16.8469
-margin_right = 52.4691
-margin_bottom = 15.1531
+margin_left = 9.0
+margin_top = -19.2578
+margin_right = 41.0
+margin_bottom = 14.7422
 texture = ExtResource( 3 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
+
+[node name="Label2" type="Label" parent="NinePatchRect"]
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+margin_left = -66.7327
+margin_top = -34.5465
+margin_right = 32.2673
+margin_bottom = 27.4535
+custom_fonts/font = ExtResource( 2 )
+custom_colors/font_color = Color( 0.956863, 1, 0, 1 )
+text = "/10"
+align = 1
+valign = 1
