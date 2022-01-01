@@ -95,7 +95,6 @@ margin_top = 603.0
 margin_right = 1040.0
 margin_bottom = 617.0
 size_flags_vertical = 7
-text = "Demo version. Game in development."
 align = 1
 
 [node name="FadeIn" parent="." instance=ExtResource( 6 )]
